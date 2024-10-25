@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="carousel-slide"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="test.js"></script>
+    <title>sabari Promoters & Developers</title>
+    <link rel="icon" href="img/logo1.jpeg">
+</head>
+
+<body>
+    <header>
+        <div class="contact-info"> <!----contact info-->
+            <span>📞 04224707770</span>
+            <span>✉️ customercare@Sk.in</span>
+            <span>📍 176-42, NGN St, Siddhapudur, Coimbatore</span>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="img/sabari-png1.jpeg" alt="Realestate">
+                <span></span>
+            </div>
+            <nav class="navbar"> <!-- nav bar-->
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand"></a>
+                    <!-- Hamburger icon for mobile -->
+                    <button class="navbar-toggle" onclick="toggleMenu()">&#9776;</button>
+                </div>
+
+                <ul class="dropdown-menu" id="navbarMenu">
+                    <li><a class="dropdown-item" href="#">
+                            <h4>HOME</h4>
+                        </a></li>
+                    <li><a class="dropdown-item" href="#">
+                            <h4>ABOUT US</h4>
+                        </a></li>
+                    <li><a class="dropdown-item" href="#">
+                            <h4>OUR PROPERTIES</h4>
+                        </a></li>
+                    <li><a class="dropdown-item" href="#">
+                            <h4>SERVICES</h4>
+                        </a></li>
+                    <li><a class="dropdown-item" href="#">
+                            <h4>CONTACT US</h4>
+                        </a></li>
+                </ul>
+
+                <div class="contact-btn">
+                    <button>Contact Us</button>
+                </div>
+            </nav>
+            <script>
+                 document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var navbarMenu = document.getElementById('navbarMenu');
+            navbarMenu.classList.toggle('show');  // Toggle the "show" class to display or hide the menu
+        });
+    });
+            </script>
+
+
+
+        </div>
+    </header>
+    <main>
+        <center>
+            <div>
+                <div class="ren">
+                    <img src="img/sabari-png2.jpeg" style="width: 80px; height:80px">
+                    <h1> sabari Promoters & Developers </h1>
+                    <h1> Coimbatore</h1>
+                </div>
+                <div class="button-container">
+
+                    <button class="solar-solution"> Solution</button>
+                </div>
+            </div>
+        </center>
+    </main>
+
+    <div class="banner-carousel"> <!----banner-->
+        <div class="carousel-slide" id="carousel-slide">
+            <img src="banner_slider/1.jpg" alt="Image 1" class="carousel-image">
+            <img src="banner_slider/2.jpg" alt="Image 2" class="carousel-image">
+            <img src="banner_slider/3.jpg" alt="Image 3" class="carousel-image">
+            <img src="banner_slider/4.jpg" alt="Image 4" class="carousel-image">
+        </div>
+        <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+        <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentSlide = 0;
+            const totalSlides = document.querySelectorAll('.carousel-image').length;
+            const carouselSlide = document.getElementById('carousel-slide');
+    
+            function updateSlidePosition() {
+                const slideWidth = document.querySelector('.carousel-image').clientWidth;
+                carouselSlide.style.transform = `translateX(-${currentSlide * slideWidth}px)`; // Corrected template literal syntax
+            }
+    
+            function moveSlide(direction) {
+                currentSlide += direction;
+                if (currentSlide < 0) {
+                    currentSlide = totalSlides - 1; // Wrap to the last slide
+                } else if (currentSlide >= totalSlides) {
+                    currentSlide = 0; // Wrap to the first slide
+                }
+                updateSlidePosition();
+            }
+    
+            // Update slide position on window resize to keep it responsive
+            window.addEventListener('resize', updateSlidePosition);
+    
+            // Add event listeners to buttons
+            document.getElementById('prevBtn').addEventListener('click', function() {
+                moveSlide(-1);
+            });
+    
+            document.getElementById('nextBtn').addEventListener('click', function() {
+                moveSlide(1);
+            });
+        });
+    </script>
+    
+    <style>
+        .banner-carousel {
+            position: relative;
+            overflow: hidden; /* Hide overflow for the carousel */
+            width: 100%;
+        }
+    
+        .carousel-slide {
+            display: flex; /* Align images in a row */
+            transition: transform 0.5s ease; /* Smooth transition */
+            width: 100%; /* Adjust based on the number of images */
+        }
+    
+        .carousel-image {
+            min-width: 100%; /* Each image takes full width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7); /* Optional styling */
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+    
+        .prev {
+            left: 10px;
+        }
+    
+        .next {
+            right: 10px;
+        }
+    </style>
+    
+
+   <!---about us section-->
+    <section id="about" class="about-section w-100 d-sm-block d-lg-flex ">
+        <h2>About Us</h2>
+        <p>sabari Promoters & Developers is committed to providing quality real estate services.</p>
+        <div class="about-features">
+            <div class="feature">
+                <img class="side_img" src="side-img/hand-presenting-model-house-home-loan-campaign.jpg" alt="img">
+                <h3>Quality Assurance</h3>
+                <p>We adhere to the highest quality standards in all our projects.</p>
+            </div>
+            <div class="feature">
+                <img class="side_img" src="side-img/hand-presenting-model-house-home-loan-campaign.jpg" alt="img">
+                <h3>Customer Focus</h3>
+                <p>Your satisfaction is our top priority; we work closely with you.</p>
+            </div>
+            <div class="feature">
+                <img class="side_img" src="side-img/hand-presenting-model-house-home-loan-campaign.jpg" alt="img">
+                <h3>Experienced Team</h3>
+                <p>Our team comprises seasoned professionals in the real estate industry.</p>
+            </div>
+        </div>
+    </section>
+
+    <!---our services Section-->
+    <section id="services" class="services-section section-page bg-green ">
+
+        <h2>Our Services</h2>
+       
+        <div class="service">
+            <div class="service-container">
+                <img class="side_img" src="side-img/hand-presenting-model-house-home-loan-campaign.jpg" alt="img">
+                <h3>Property Development</h3>
+                <p>We develop residential and commercial properties with a focus on quality.</p>
+            </div>
+        </div>
+        <div class="service">
+            <div class="service-container">
+                <img class="side_img" src="side-img/hand-presenting-model-house-home-loan-campaign.jpg" alt="img">
+                <h3>Real Estate Consultation</h3>
+                <p>Expert advice to guide you through your property investments.</p>
+            </div>
+        </div>
+        <div class="service">
+            <div class="service-container">
+                <img class="side_img" src="side-img/hand-presenting-model-house-home-loan-campaign.jpg" alt="img">
+                <h3>Project Management</h3>
+                <p>Comprehensive project management to ensure timely delivery.</p>
+            </div>
+        </div>
+
+       
+    </section>
+
+        <!--our projects section-->
+     <!-- Section with image and text -->
+    <section class="intro-section">
+        <div class="text-content">
+            <h1>Real Estate Promoters in Coimbatore</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non blanditiis atque 
+                delectus tenetur quasi tempore officia provident corporis labore distinctio.
+            </p>
+            <div class="statistics">
+                <div class="stat-item">
+                    <h2>80+</h2>
+                    <p>Completed Projects</p>
+                </div>
+                <div class="stat-item">
+                    <h2>10,000+</h2>
+                    <p>Happy Families</p>
+                </div>
+                <div class="stat-item">
+                    <h2>3+</h2>
+                    <p>Ongoing Projects</p>
+                </div>
+                <div class="stat-item">
+                    <h2>20+</h2>
+                    <p>Field Experience</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="split-image/4.jpeg" alt="Real Estate Agent">
+            <div class="years-excellence">
+                <h2>24</h2>
+                <p>Years of Excellence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section with available plot categories -->
+    <section class="plots-section">
+        <div class="plot-item">
+            <img src="icon-image/1.png" alt="Plots in Karamadai">
+            <h3>Plots in Gandhipuram </h3>
+            <p>Locate the available lands for sale in Karamadai to invest in your dream property.</p>
+        </div>
+        <div class="plot-item">
+            <img src="icon-image/2.png" alt="Plots in Sathyamangalam">
+            <h3>Plots in Ukkudam</h3>
+            <p>Dive into our ongoing project in Sathyamangalam.</p>
+        </div>
+        <div class="plot-item">
+            <img src="icon-image/3.png" alt="Plots in Perumanallur">
+            <h3>Plots in Palladam</h3>
+            <p>Explore our property for sale in Perumanallur.</p>
+        </div>
+    </section>
+
+    <!---split image section-->
+    <section class="split-section">
+        <div class="image-section">
+            <img src="split-image/3.jpeg" alt="Living Room" />
+        </div>
+        <div class="content-section">
+            <h1>Why You Should Work With Us</h1>
+            <p>
+                Professional property expertise at your fingertips. Whether you want to buy, rent, or consult, 
+                we make your real estate experience seamless and convenient.
+            </p>
+            <div class="services">
+                <div class="service-item">
+                    <h3>Buy or Rent Homes</h3>
+                    <p>Get the best prices and the quickest transactions.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Trusted by Thousands</h3>
+                    <p>We have helped thousands of clients find their perfect homes.</p>
+                </div>
+            </div>
+            <button class="cta-button">Learn More</button>
+        </div>
+    </section>
+
+    <!--contact section-->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sk Developers. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>
